@@ -4,14 +4,13 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-int ObrSchet (int b)
-{
-    if (b == 0) return 1;
-    Console.Write("{0,4}", b);
-    return ObrSchet(b - 1);
-}
-
-Console.WriteLine("Введите натуральное число больше 1:");
+Console.WriteLine("Enter the number:");
 int a = Convert.ToInt32(Console.ReadLine());
-if(a<1) Console.WriteLine("Число не больше 1");
-else ObrSchet(a);
+int recursion (int n)
+{
+    if (n == 0) return 1;
+    Console.Write("{0,4}", n);
+    return recursion(n - 1);
+}
+if(a <  1 ) Console.WriteLine("0");
+else recursion(a);
