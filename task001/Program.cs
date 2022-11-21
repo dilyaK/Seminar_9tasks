@@ -4,13 +4,14 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-Console.WriteLine("Enter the number:");
-int a = Convert.ToInt32(Console.ReadLine());
-int recursion (int n)
+
+int Recursion (int m)
 {
-    if (n == 0) return 1;
-    Console.Write("{0,4}", n);
-    return recursion(n - 1);
+    if (m == 0) return 1;
+    Console.Write("{0,4}", m);
+    return Recursion(m - 1);
 }
-if(a <  1 ) Console.WriteLine("0");
-else recursion(a);
+Console.WriteLine("Enter the number:");
+int n = Convert.ToInt32(Console.ReadLine());
+if(n <  1 ) Console.WriteLine("0");
+else Recursion(n);
